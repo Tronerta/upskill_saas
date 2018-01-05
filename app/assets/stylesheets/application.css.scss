@@ -1,58 +1,37 @@
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
 
+// Typography styles
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+// Background gradient
 .navbar, .home-callout {
-  // Gradient provided by: uigradients.com
+  // provided by: uigradients.com
   background: #44A08D;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+// Nav styles
 .navbar {
   border: none;
 }
 
-.navbar-default .navbar-brand {
-  color: white;
-}
-
-.navbar-default .navbar-brand:hover {
-  color: white;
-  opacity: 0.75;
-}
-
+.navbar-default .navbar-brand,
 .navbar-default .navbar-nav li a {
   color: white;
+  &:hover {
+    color: white;
+    opacity: 0.75;
+  }
 }
 
-.navbar-default .navbar-nav li a:hover {
-  color: white;
-  opacity: 0.75;
-}
-
+// Home Page styles
 .home-callout {
   color: white;
   margin-top: -20px;
   padding-top: 50px;
   padding-bottom: 100px;
 }
-
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
