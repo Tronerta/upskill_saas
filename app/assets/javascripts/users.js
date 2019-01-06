@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function(){
     event.preventDefault();
     submitBtn.val('Processing').prop('disabled', true);
 
-    // collect credit catd fields
+    // collect credit card fields
     let ccNum = $('#card_number').val(),
         cvcNum = $('#card_code').val(),
         expMonth = $('#card_month').val(),

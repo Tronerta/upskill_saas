@@ -23,6 +23,11 @@ gem 'jbuilder', '2.5.0'
 # gem 'bcrypt', '3.1.7'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
+gem "rack", ">= 2.0.6"
+gem "sprockets", ">= 3.7.2"
+gem "nokogiri", ">= 1.8.2"
+gem "rails-html-sanitizer", ">= 1.0.4"
+gem "loofah", ">= 2.2.3"
 
 # Use Twitter Bootstrap library for front-end
 gem 'bootstrap-sass', '3.3.7'
