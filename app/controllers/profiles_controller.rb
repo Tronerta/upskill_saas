@@ -1,7 +1,12 @@
 class ProfilesController < ApplicationController
+  before_action :authenticate_user!
+  before_action :only_current_user
+
+  # GET to users/:user_id/profile/new
   def new
     @profile = Profile.new
   end
+
   # POST to /users/:user_id/profile
   def create
     # Ensure that we have the user who is filling out form
@@ -11,7 +16,7 @@ class ProfilesController < ApplicationController
 
     if @profile.save
       flash[:success] = "Profile created!"
-      redirect_to user_path(id: params[:user_id])
+      redirect_to user_path(params[:user_id])
     else
       render action: :new
     end
@@ -40,5 +45,10 @@ class ProfilesController < ApplicationController
   private
     def profile_params
       params.require(:profile).permit(:first_name, :last_name, :avatar, :job_title, :phone_number, :contact_email, :description)
+    end
+
+    def only_current_user
+      @user = User.find(params[:user_id])
+      redirect_to(root_path) unless @user == current_user
     end
 end
