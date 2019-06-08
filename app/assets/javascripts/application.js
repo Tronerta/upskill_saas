@@ -15,9 +15,3 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap-sprockets
-
-/* global $, FontAwesome */
-
-$(document).on('turbolinks:load', function(){
-  FontAwesome.dom.i2svg();
-})

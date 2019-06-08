@@ -33,7 +33,7 @@ gem "loofah", ">= 2.2.3"
 gem 'bootstrap-sass', '3.3.7'
 
 # Use Font Awesome sass gem for adding icons
-gem 'font-awesome-sass', '~> 5.6.1'
+gem 'font-awesome-sass', '4.6.2'
 
 # Use Hirb for better database table display in console
 gem 'hirb', '0.7.3'
